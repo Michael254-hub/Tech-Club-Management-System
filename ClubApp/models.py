@@ -3,10 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class CustomUser(User):
-    pass #placeholder for future implementation
-    #Add custom fields here,e.g.,
-    #role = models.CharField(max_length=20, choices=[('member',
-    #'Member'), (admin,'Admin')])
+    #pass placeholder for future implementation
+    role = models.CharField(max_length=20, choices=[('member',
+    'Member')]), #(admin,'Admin')])
 
 class Event(models.Model):
     title = models.CharField(max_length=100)

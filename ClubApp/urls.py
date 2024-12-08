@@ -4,7 +4,7 @@ from ClubApp import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('accounts/login/', views.login, name='login'),
-    path('register/', views.register, name='register'),
+    path('signup/', views.signup, name='signup'),
     path('about/', views.about, name='about'),
     path('programs/', views.programs, name='programs'),
     path('resources/', views.resources, name='resources'),
