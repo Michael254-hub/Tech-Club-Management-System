@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <form class="register-form" method="POST" action="{% url 'user-registration' %}">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Join Tech Club</legend>
+        {{ form }}
+    </fieldset>
+    <div class="form-group">
+        <input class="btn btn-info" value="Register" type="submit">
+    </div>
+    </form>
+{% endblock %}
