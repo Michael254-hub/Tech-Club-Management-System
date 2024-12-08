@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Club</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+      <div class="navbar">
+          <div class="container">
+              <div class="logo">Tech Club</div>
+              <ul class="nav-links">
+                  <li class="nav-item"><a href="{% url 'index' %}" class="nav-links">Home</a></li>
+                  <li class="nav-item"><a href="{% url 'about' %}" class="nav-links">About</a></li>
+                  <li class="nav-item"><a href="{% url 'programs' %}" class="nav-links">Programs</a></li>
+                  <li class="nav-item"><a href="{% url 'resources' %}" class="nav-links">Resources</a></li>
+                  <li class="nav-item"><a href="{% url 'events' %}" class="nav-links">Events</a></li>
+                  <li class="nav-item"><a href="{% url 'blog' %}" class="nav-links">Blog</a></li>
+                  <li class="nav-item"><a href="{% url 'community' %}" class="nav-links">Community</a></li>
+                  <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-links">Contacts</a></li>
+                  <li class="nav-item"><a href="{% url 'login' %}" class="nav-links">Login</a></li>
+              </ul>
+              </div>
+          </div>
+  </header>
+
+{% block content %}
+
+{% endblock %}
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <!-- About Us Column -->
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>
+          We are a community of tech enthusiasts in Kenya, fostering innovation and collaboration through technology.
+        </p>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Column -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:techclub@gmail.com">techclub@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        <p>Location: Nairobi, Kenya</p>
+      </div>
+
+      <!-- Follow Us Column -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X formerly Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      © 2024 Tech Club. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
