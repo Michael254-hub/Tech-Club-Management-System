@@ -85,7 +85,6 @@ def events(request):
     ]
     return render(request, 'events.html')
 
-@login_required
 def blog(request):
     # Static data for now; replace with database model later
     blog_posts = [
