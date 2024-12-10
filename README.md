@@ -26,7 +26,7 @@ This system includes features such as:
   - **Programs**
   - **Resources**
   - **Events**
-  - **Blog**
+  - **Blog** 
   - **Community**
   - **Contacts**
   - **Login**
