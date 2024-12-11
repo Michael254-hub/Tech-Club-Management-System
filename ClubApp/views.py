@@ -13,7 +13,7 @@ def index(request):
 def login(request: WSGIRequest):
     if request.method == 'POST':
         username = request.POST.get('username')
-        pass1 = request.POST.get('password')
+        password1 = request.POST.get('password1')
         user = authenticate(request, username=username, password=password1)
         if user is not None:
             auth_login(request, user)
@@ -27,14 +27,14 @@ def signup(request):
     if request.method == 'POST':
         uname = request.POST.get('username')
         email = request.POST.get('email')
-        pass1 = request.POST.get('password1')
-        pass2 = request.POST.get('password2')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
 
-        if pass1 != pass2:
-            return HttpResponse("Your password and confrom password are not Same!!")
+        if password1 != password2:
+            return HttpResponse("Your password and confirm password are not Same!!")
         else:
 
-            my_user = User.objects.create_user(uname, email, pass1)
+            my_user = User.objects.create_user(uname, email, password1)
             my_user.save()
             return redirect('login')
 
@@ -142,6 +142,7 @@ def contacts(request):
         message = request.POST.get('message')
         # Here you can handle saving data or sending an email
         return HttpResponse(f"Thank you, {name}! Your message has been received.")
+
     return render(request, 'contacts.html')
 
 def logout(request: WSGIRequest):
